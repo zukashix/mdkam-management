@@ -374,7 +374,7 @@ try:
                 else: 
                     pickle.dump(userClientDataDict, open(f'{ADPATH}/D2', 'wb'))
 
-            if userViewChoice.lower() == 'b':
+            elif userViewChoice.lower() == 'b':
                 if len(currentUserClientDict) == 0:
                     print('WARNING: You cannot perform this action as there are no client entries! You must create a client entry first!')
                     time.sleep(3)
@@ -386,7 +386,7 @@ try:
                 else: 
                     pickle.dump(userClientDataDict, open(f'{ADPATH}/D2', 'wb'))
 
-            if userViewChoice.lower() == 'c':
+            elif userViewChoice.lower() == 'c':
                 if len(currentUserClientDict) == 0:
                     print('WARNING: You cannot perform this action as there are no client entries! You must create a client entry first!')
                     time.sleep(3)
@@ -398,13 +398,13 @@ try:
                 else: 
                     pickle.dump(userClientDataDict, open(f'{ADPATH}/D2', 'wb'))
 
-            if userViewChoice.lower() == 'd':
+            elif userViewChoice.lower() == 'd':
                 print('Qutting...')
                 time.sleep(3)
                 os.system('cls')
                 exit(0)
 
-            if userViewChoice.lower() == 'e':
+            elif userViewChoice.lower() == 'e':
                 pythonV = platform.python_version()
                 osV = platform.platform()
                 userhost = os.getlogin() + '@' + platform.node()
@@ -428,6 +428,11 @@ try:
                         print('File dump failed. Returning...')
 
                 time.sleep(3)
+
+            else:
+                print('WARNING: No such option. Returning...')
+                time.sleep(3)
+                continue
 
 except KeyboardInterrupt:
     print('WARNING: Keyboard interrupt detected. Quitting...')
