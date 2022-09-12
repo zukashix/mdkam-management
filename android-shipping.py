@@ -1,7 +1,7 @@
 # name: Ertugul Enterprises client money management program
 # author: zukashix (https://github.com/zukashix)
-# python version used: 3.8.10 x64 for Windows
-# 3rd party pip modules: pwinput, prettytable
+# python version used: 3.9.7 (pydroid3) on android 10 arm64
+# 3rd party pip modules: prettytable
 
 # import modules
 try:
@@ -10,7 +10,7 @@ try:
     import os
     import platform
     import traceback
-    from prettytable import PrettyTable as ptab # v3.3.0
+    from prettytable import PrettyTable as ptab
     from shutil import rmtree
 except:
     print('FATAL: Importing of modules failed. Please contact the developer')
